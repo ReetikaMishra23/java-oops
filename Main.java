@@ -1,82 +1,17 @@
-class Student {
-    String name;
-    int age;
+import java.util.HashMap;
 
-    // Constructor
-    Student(String name, int age) {
-        this.name = name;
-        this.age = age;
-    }
-
-    void display() {
-        System.out.println("Name: " + name);
-        System.out.println("Age: " + age);
-    }
-
-    public static void main(String[] args) {
-        Student s1 = new Student("Reetika", 20);
-
-        s1.display();
-    }
-}
-
-//encapsulation---
-class Student {
-    private String name;
-    private int age;
-
-    // Setter methods
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    // Getter methods
-    public String getName() {
-        return name;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
+public class Main {
     public static void main(String[] args) {
 
-        Student s1 = new Student();
-
-        s1.setName("Reetika");
-        s1.setAge(20);
-
-        System.out.println("Name: " + s1.getName());
-        System.out.println("Age: " + s1.getAge());
-    }
-}
-
-
-
-
-//inheritence
-class Animal {
-
-    void eat() {
-        System.out.println("Animal is eating");
-    }
-}
-
-class Dog extends Animal {
-
-    void bark() {
-        System.out.println("Dog is barking");
-    }
-
-    public static void main(String[] args) {
-
-        Dog d1 = new Dog();
-
-        d1.eat();   // inherited from Animal
-        d1.bark();  // Dog's own method
+        HashMap<Integer, Integer> marks = new HashMap<>();
+        marks.put(101, 85);
+        marks.put(102, 90);
+        marks.put(103, 78);
+        marks.put(104, 92);
+        marks.put(105, 88);
+        System.out.println("Students: " + marks);
+        marks.remove(103);
+        System.out.println("Marks of 102: " + marks.get(102));
+        System.out.println("After changes: " + marks);
     }
 }
